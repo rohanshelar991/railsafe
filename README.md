@@ -2,6 +2,24 @@
 
 RailSafe is a local, software-only research prototype for front-camera railway video analysis. It combines YOLO11n detection, ByteTrack IDs, a track-region filter, monocular estimated distance, estimated TTC, risk classification, and a virtual train braking state machine. It does not control, connect to, or certify any real railway equipment.
 
+## Contents
+
+- [Problem statement](#problem-statement)
+- [Objectives](#objectives)
+- [Technologies](#technologies)
+- [Current baseline and attribution](#current-baseline-and-attribution)
+- [Quick start](#quick-start)
+- [Integrated implementation status](#integrated-implementation-status)
+- [How the system works](#how-the-system-works)
+- [Models and inputs](#models-and-inputs)
+- [Estimation and risk](#estimation-and-risk)
+- [Evaluation](#evaluation)
+- [Methodology](#methodology)
+- [Results](#results)
+- [Reproducibility and input media](#reproducibility-and-input-media)
+- [Limitations](#limitations)
+- [Project layout](#project-layout)
+
 ## Problem statement
 
 Obstacle detection from a forward-facing railway camera must distinguish objects that are actually within the rail corridor from objects beside the track, then communicate an interpretable risk estimate. A student-scale prototype needs to demonstrate this pipeline without pretending that uncalibrated monocular video is a certified signalling or braking system.
@@ -35,6 +53,13 @@ The preserved upstream reference is [Railroad_and_Obstacle_detection](https://gi
 The original system assumes TensorFlow 1, CUDA 10, the TensorFlow Models repository, Windows-only `win32*` modules, an external U-Net checkpoint, and a trained Faster R-CNN graph. It is retained as a reference, not forced onto current macOS/Python.
 
 ## Quick start
+
+### Prerequisites
+
+- Python 3.10 or newer
+- `pip` and `venv`
+- Optional: a webcam for live input
+- Optional: compatible `.mp4` files in `full_git_repo/video/` for local video runs
 
 Install into a Python 3.10+ environment (the current workspace was verified with Python 3.14):
 
