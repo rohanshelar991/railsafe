@@ -51,6 +51,15 @@ source .venv/bin/activate
 python run.py
 ```
 
+The same environment can run the repeatable checks through the included
+`Makefile`:
+
+```bash
+make test
+make scenario
+make evaluation
+```
+
 Or launch Streamlit directly:
 
 ```bash
@@ -134,7 +143,7 @@ The reproducible baseline currently reports 16 passing deterministic tests. The 
 
 ## Reproducibility and input media
 
-The source code, configuration, tests, and deterministic scenario are versioned. Large upstream videos are intentionally excluded from GitHub to keep the repository practical; place compatible `.mp4` files in `full_git_repo/video/` or upload a file through the dashboard. The default configuration and tests do not require video media.
+The source code, configuration, tests, and deterministic scenario are versioned. Large upstream videos are intentionally excluded from GitHub to keep the repository practical; place compatible `.mp4` files in `full_git_repo/video/` or upload a file through the dashboard. The expected filenames are documented in [data/README.md](data/README.md). The default configuration and tests do not require video media.
 
 From a fresh checkout:
 
