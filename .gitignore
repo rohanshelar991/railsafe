@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.DS_Store
+*.zip
+*.mp4
+*.avi
+*.mov
+*.mkv
+full_git_repo/video/
+yolo11n.pt
+outputs/logs/*.csv
+outputs/figures/*.png
+outputs/figures/*.jpg
+data/uploads/

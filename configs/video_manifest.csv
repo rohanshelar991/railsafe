@@ -1,0 +1,13 @@
+video,resolution,fps,duration,scenario,ground_truth_available,notes
+complex1.mp4,1920x1080,30.000,23.633,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.
+complex2.mp4,1920x1080,30.000,24.300,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.
+complex3.mp4,1920x1080,30.000,26.300,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.
+complex4.mp4,1376x832,24.323,70.057,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.
+complex5.mp4,1376x832,24.444,80.919,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.
+complex6.mp4,1376x832,24.523,56.274,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.
+complex7.mp4,1376x832,24.450,82.700,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.
+complex_crash.mp4,1920x1080,30.000,8.933,UNSPECIFIED,false,Real video experiment; filename is preserved, but event labels are not assumed.
+complex_left.mp4,1920x1080,30.000,30.000,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.
+complex_right.mp4,1920x1080,30.000,30.000,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.
+normal_left.mp4,1920x1080,30.000,29.967,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.
+normal_right.mp4,1920x1080,30.000,30.000,UNSPECIFIED,false,Real video experiment; no ground-truth labels supplied.

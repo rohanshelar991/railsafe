@@ -1,0 +1,21 @@
+metric,value,status
+Precision,,Not evaluated - ground truth unavailable.
+Recall,,Not evaluated - ground truth unavailable.
+F1,,Not evaluated - ground truth unavailable.
+mAP50,,Not evaluated - ground truth unavailable.
+mAP50-95,,Not evaluated - ground truth unavailable.
+ID consistency,,Not evaluated - ground truth unavailable.
+ID switches,,Not evaluated - ground truth unavailable.
+track persistence,,Not evaluated - ground truth unavailable.
+false alarm rate,,Not evaluated - ground truth unavailable.
+missed obstacle rate,,Not evaluated - ground truth unavailable.
+warning lead time,,Not evaluated - ground truth unavailable.
+confirmation delay,,Not evaluated - ground truth unavailable.
+emergency braking accuracy,,Not evaluated - ground truth unavailable.
+MAE,,Not evaluated - ground truth unavailable.
+RMSE,,Not evaluated - ground truth unavailable.
+MAPE,,Not evaluated - ground truth unavailable.
+FPS,,Not evaluated - ground truth unavailable.
+inference latency,,Not evaluated - ground truth unavailable.
+CPU usage,,Not evaluated - ground truth unavailable.
+memory usage,,Not evaluated - ground truth unavailable.

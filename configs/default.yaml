@@ -1,0 +1,78 @@
+project:
+  name: RailSafe
+  source_video_dir: full_git_repo/video
+  output_dir: outputs
+
+detection:
+  model: yolo11n.pt
+  confidence_threshold: 0.45
+  image_size: 640
+  tracker: bytetrack.yaml
+  allowed_classes: [person, bicycle, car, motorcycle, bus, truck, train]
+
+track_detection:
+  # `auto` uses models/track.pt when supplied, otherwise geometric fallback.
+  method: auto
+  model_path: models/track.pt
+  track_class_name: track
+  confidence_threshold: 0.25
+  image_size: 640
+  threshold: 0.50
+  fallback_top_width_ratio: 0.10
+  fallback_bottom_width_ratio: 0.86
+  fallback_horizon_ratio: 0.42
+
+track_segmentation:
+  # Backward-compatible TorchScript option.
+  method: geometric
+  learned_model_path: models/track_segmenter.ts
+  threshold: 0.50
+  fallback_top_width_ratio: 0.10
+  fallback_bottom_width_ratio: 0.86
+  fallback_horizon_ratio: 0.42
+
+on_track:
+  partial_overlap_threshold: 0.08
+  overlap_threshold: 0.30
+  confirmation_frames: 5
+  lateral_center_threshold: 0.33
+
+temporal:
+  confirmation_frames: 5
+  lost_track_frames: 10
+  minimum_confidence: 0.45
+
+distance:
+  # Monocular estimate: d = focal_length_px * nominal_object_height_m / bbox_height_px.
+  focal_length_px: 700.0
+  class_heights_m:
+    person: 1.70
+    bicycle: 1.20
+    motorcycle: 1.40
+    car: 1.50
+    bus: 3.20
+    truck: 3.50
+    train: 3.50
+  minimum_bbox_height_px: 8
+
+risk:
+  caution_ttc_s: 8.0
+  warning_ttc_s: 5.0
+  high_ttc_s: 3.0
+  critical_ttc_s: 2.0
+  caution_margin_m: 25.0
+  warning_margin_m: 10.0
+  critical_margin_m: 0.0
+  auto_brake_at: CRITICAL
+
+train:
+  initial_speed_kmh: 0.0
+  max_speed_kmh: 80.0
+  acceleration_mps2: 0.8
+  service_brake_mps2: 1.2
+  emergency_brake_mps2: 2.5
+  reaction_time_s: 1.5
+
+audio:
+  enabled: false
+  minimum_risk: WARNING
