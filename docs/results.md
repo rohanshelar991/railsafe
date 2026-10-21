@@ -1,5 +1,13 @@
 # Results status
 
+## Reproducible baseline
+
+On the submission environment (Python 3.14, installed dependencies, no
+video input), the deterministic test suite completed with **16 passed**.
+`evaluation/run_scenarios.py` recreated the critical-risk braking CSV and
+figures. These checks validate software behavior and repeatability; they are
+not measurements of railway perception accuracy.
+
 Measured claims currently available:
 
 - Source video opens successfully.
